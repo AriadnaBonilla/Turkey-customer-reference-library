@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session Summary — SAP Turkey Project</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; color: #1a2535; }
+
+    .header {
+      background: linear-gradient(135deg, #08255a 0%, #1565c0 100%);
+      color: white; padding: 28px 40px 24px;
+    }
+    .header-row { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+    .sap-badge { background: #f0ab00; color: #08255a; font-weight: 900; font-size: 18px; padding: 3px 10px; border-radius: 4px; }
+    .header h1 { font-size: 22px; font-weight: 300; }
+    .header p { font-size: 13px; opacity: 0.6; margin-top: 2px; }
+
+    .content { max-width: 860px; margin: 32px auto; padding: 0 24px 60px; }
+
+    .section { background: white; border-radius: 12px; border: 1px solid #e8ecf0; margin-bottom: 20px; overflow: hidden; }
+    .section-header { padding: 16px 20px; border-bottom: 1px solid #f0f2f5; display: flex; align-items: center; gap: 10px; }
+    .section-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .section-title { font-size: 15px; font-weight: 600; }
+    .section-body { padding: 16px 20px; }
+
+    .msg { display: flex; gap: 12px; margin-bottom: 16px; }
+    .msg:last-child { margin-bottom: 0; }
+    .msg-avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white; flex-shrink: 0; margin-top: 2px; }
+    .msg-user .msg-avatar { background: #1565c0; }
+    .msg-claude .msg-avatar { background: #7c3aed; }
+    .msg-bubble { background: #f8f9fb; border-radius: 10px; padding: 10px 14px; font-size: 13.5px; line-height: 1.6; flex: 1; border: 1px solid #f0f2f5; }
+    .msg-user .msg-bubble { background: #eff6ff; border-color: #dbeafe; }
+
+    .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+    .file-card { border: 1.5px solid #e8ecf0; border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; transition: all .15s; }
+    .file-card:hover { border-color: #1565c0; background: #f0f5ff; }
+    .file-icon { font-size: 22px; flex-shrink: 0; }
+    .file-name { font-size: 13px; font-weight: 600; }
+    .file-desc { font-size: 11px; color: #7a8799; margin-top: 2px; }
+
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+    .tag-done { background: #dcfce7; color: #15803d; }
+    .tag-pending { background: #fef3c7; color: #b45309; }
+
+    .timeline { list-style: none; }
+    .timeline li { display: flex; gap: 14px; padding-bottom: 18px; position: relative; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ''; position: absolute; left: 15px; top: 28px; bottom: 0; width: 2px; background: #e8ecf0; }
+    .timeline li:last-child::before { display: none; }
+    .tl-dot { width: 32px; height: 32px; border-radius: 50%; background: #1565c0; color: white; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+    .tl-text { padding-top: 6px; }
+    .tl-title { font-size: 13.5px; font-weight: 600; }
+    .tl-desc { font-size: 12px; color: #7a8799; margin-top: 3px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-row">
+    <span class="sap-badge">SAP</span>
+    <div style="width:1px;height:28px;background:rgba(255,255,255,0.25)"></div>
+    <h1>Session Summary — Turkey Presales Project</h1>
+  </div>
+  <p>Claude Code session · 28 May 2026 · INTERNAL – SAP and External Parties under NDA Only</p>
+</div>
+
+<div class="content">
+
+  <!-- What we built -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#eff6ff">📁</div>
+      <div class="section-title">Files Created in This Session</div>
+    </div>
+    <div class="section-body">
+      <div class="file-grid">
+        <a class="file-card" href="customer-library.html">
+          <div class="file-icon">🗂️</div>
+          <div>
+            <div class="file-name">customer-library.html</div>
+            <div class="file-desc">Interactive customer reference library · 159 logos</div>
+          </div>
+        </a>
+        <div class="file-card">
+          <div class="file-icon">📂</div>
+          <div>
+            <div class="file-name">logos/ (folder)</div>
+            <div class="file-desc">159 PNG logos extracted from screenshots</div>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-icon">🎬</div>
+          <div>
+            <div class="file-name">Videos/ (folder)</div>
+            <div class="file-desc">SAP Executive Summit video + screenshots</div>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-icon">🐍</div>
+          <div>
+            <div class="file-name">extract_logos.py</div>
+            <div class="file-desc">Auto-extracts logos from screenshot images</div>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-icon">🐍</div>
+          <div>
+            <div class="file-name">rebuild_logos.py</div>
+            <div class="file-desc">Re-extracts missing logos + embeds as base64</div>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-icon">🔧</div>
+          <div>
+            <div class="file-name">ffmpeg</div>
+            <div class="file-desc">Audio/video processing tool (required by Whisper)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What is in progress -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#fef3c7">⏳</div>
+      <div class="section-title">In Progress</div>
+    </div>
+    <div class="section-body">
+      <div class="msg msg-claude">
+        <div class="msg-avatar">C</div>
+        <div class="msg-bubble">
+          <strong>Video Transcription</strong> is currently running in the background using OpenAI Whisper (medium model, Turkish language).<br><br>
+          File: <code>SAP EXECUTİVE SUMMIT ROP TOPLAM_REV-009 (1).mp4</code> (2.1 GB)<br><br>
+          Once complete, the transcript will be saved to the <code>Videos/</code> folder and processed into a structured document with <strong>customer names</strong> and <strong>topics discussed</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What was done step by step -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#f0fdf4">✅</div>
+      <div class="section-title">Session Timeline</div>
+    </div>
+    <div class="section-body">
+      <ul class="timeline">
+        <li>
+          <div class="tl-dot">1</div>
+          <div class="tl-text">
+            <div class="tl-title">Created folder structure <span class="tag tag-done">Done</span></div>
+            <div class="tl-desc">Created <code>Desktop/Claude/Videos/</code> folder</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot">2</div>
+          <div class="tl-text">
+            <div class="tl-title">Installed Whisper + dependencies <span class="tag tag-done">Done</span></div>
+            <div class="tl-desc">openai-whisper, PyTorch, Pillow, scipy, ffmpeg</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot">3</div>
+          <div class="tl-text">
+            <div class="tl-title">Built interactive customer library <span class="tag tag-done">Done</span></div>
+            <div class="tl-desc">HTML app with search, industry filters, 159 logos, download buttons · 155+ Turkish SAP Cloud ERP customers across 20 industries</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot">4</div>
+          <div class="tl-text">
+            <div class="tl-title">Extracted logos from screenshots <span class="tag tag-done">Done</span></div>
+            <div class="tl-desc">Python image processing auto-extracted 159 logos from 5 screenshots. All embedded as base64 — works fully offline.</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot">5</div>
+          <div class="tl-text">
+            <div class="tl-title">Added download button to each logo card <span class="tag tag-done">Done</span></div>
+            <div class="tl-desc">One-click PNG download from the library</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot">6</div>
+          <div class="tl-text">
+            <div class="tl-title">Video transcript <span class="tag tag-pending">In progress</span></div>
+            <div class="tl-desc">Whisper transcribing SAP Executive Summit video in Turkish. Will produce structured transcript with customer names and topics.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Key conversation highlights -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#fdf4ff">💬</div>
+      <div class="section-title">Key Decisions & Notes</div>
+    </div>
+    <div class="section-body" style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.7;">
+      <div>📌 All customers are <strong>Turkish SAP Cloud ERP references</strong> — marked INTERNAL / NDA.</div>
+      <div>📌 Logos were extracted directly from your screenshots using Python (Pillow + scipy), not from the internet — so they match your original slide exactly.</div>
+      <div>📌 The HTML library is <strong>fully self-contained</strong> (logos embedded as base64) — no internet connection or server needed to open it.</div>
+      <div>📌 The video transcript will be in Turkish. After transcription, a structured version will be created mapping each speaker to topics discussed.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
